@@ -1,0 +1,173 @@
+{namespace nl=NL\NlPageconfig\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <h1><f:translate key="tx_nlpageconfig_pc.heading">Page Configuration</f:translate></h1>
+    <f:be.infobox title="ViewHelper usage example:" disableIcon="1">
+        <p>
+            <span>Tag usage example</span><br>
+            <code>&lt;nl:pageconfig.get key="valueKey" pid="NULL" recursive="NULL" rootline="0" respectStorage="1" /&gt;</code>
+        </p>
+        <p>
+            <span>Inline usage example</span><br>
+            <code>&#123;nl:pageconfig.get(key: 'valueKey', pid: 'NULL', recursive: 'NULL', rootline: '0', respectStorage: '1')&#125;</code>
+        </p>
+        <p>
+            <span>Content usage example</span><br>
+            <code>###pageconfig__[valueKey]###</code>
+        </p>
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>Argument</th>
+                <th>Description</th>
+                <th class="argument-type">Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <a name="argument-key"></a>
+                    key
+                </td>
+                <td>
+                    <p>Key of configuration to retrieve (If not set, an array of configurations is returned)</p>
+                </td>
+                <td>string</td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="argument-pid"></a>
+                    pid
+                </td>
+                <td>
+                    <p>Page uid of configuration to retrieve (If no set, the current pid is used)</p>
+                </td>
+                <td>integer</td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="argument-recursive"></a>
+                    recursive
+                </td>
+                <td>
+                    <p>Retrieve configuration recursively</p>
+                </td>
+                <td>integer</td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="argument-rootline"></a>
+                    rootline
+                </td>
+                <td>
+                    <p>Retrieve configuration from the rootline (Works only if PID and recursive are not set. FALSE by default)</p>
+                </td>
+                <td>boolean</td>
+            </tr>
+                <td>
+                    <a name="argument-respectStorage"></a>
+                    respectStorage
+                </td>
+                <td>
+                    <p>Retrieve configuration respect record storage page (TRUE by default)</p>
+                </td>
+                <td>boolean</td>
+            </tr>
+            </tbody>
+            <tfoot>
+        </table>
+    </f:be.infobox>
+    <f:if condition="{configs}">
+        <div class="panel panel-space panel-default recordlist">
+            <div class="panel-heading">
+                <span><f:translate key="tx_nlpageconfig_domain_model_config">Config</f:translate> (<span class="t3js-table-total-items"><f:count subject="{configs}" /></span>)</span>
+            </div>
+            <div class="collapse in" data-state="expanded" id="recordlist-tx_nlpageconfig_domain_model_config">
+                <div class="table-fit">
+                    <table data-table="tx_nlpageconfig_domain_model_config" class="table table-striped table-hover">
+                        <thead>
+                        <!-- Element, begin: -->
+                        <tr data-uid="0" data-l10nparent="0">
+                            <th class="col-icon nowrap">
+                                <a class="btn btn-default" href="#" onclick="window.location.href='{createUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;" title="" data-original-title="New record">
+                                    <span class="t3js-icon icon icon-size-small icon-state-default icon-actions-add" data-identifier="actions-add">
+                                        <span class="icon-markup">
+                                            <f:image src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-add.svg" width="16" height="16" />
+                                        </span>
+                                    </span>
+                                </a>
+                            </th>
+                            <th class="col-title col-responsive nowrap" style="width: 33%">
+                                <span><f:translate key="tx_nlpageconfig_domain_model_config.value_key">Key</f:translate></span>
+                            </th>
+                            <th class="col-title col-responsive nowrap" style="width: 33%">
+                                <span><f:translate key="tx_nlpageconfig_domain_model_config.value">Value</f:translate></span>
+                            </th>
+                            <th class="col-title col-responsive nowrap" style="width: 33%">
+                                <span><f:translate key="tx_nlpageconfig_domain_model_config.type">Type</f:translate></span>
+                            </th>
+                            <th class="col-control nowrap">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <!-- Element, begin: -->
+                        <tbody>
+                        <f:for each="{configs}" as="config">
+                            <v:variable.set name="editUri" value="{nl:be.uri.route(route: 'record_edit', parameters: '{0: config.recordEditParams}')}" />
+                            <tr class="t3js-entity firstcol lastcol" data-table="tx_nlpageconfig_domain_model_config" title="id={config.uid}" data-uid="{config.uid}" data-l10nparent="0">
+                                <td class="col-icon nowrap">
+                                    <a href="#" class="t3js-contextmenutrigger" data-table="tx_nlpageconfig_domain_model_config" data-uid="{config.uid}">
+                                        <span data-toggle="tooltip" data-title=" id={config.uid}" data-html="true" data-placement="right" data-original-title="" title="">
+                                            <span class="t3js-icon icon icon-size-small icon-state-default icon-tcarecords-tx_nlpageconfig_domain_model_config-default" data-identifier="tcarecords-tx_nlpageconfig_domain_model_config-default">
+                                                <span class="icon-markup">
+                                                    <f:image src="EXT:nl_pageconfig/Resources/Public/Icons/tx_nlpageconfig_domain_model_config.gif" width="16" height="16" />
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </td>
+                                <td class="col-title col-responsive nowrap" style="width: 33%">
+                                    <a href="#" onclick="window.location.href='{editUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;" title="" data-original-title="Edit record">
+                                        {config.valueKey}
+                                    </a>
+                                </td>
+                                <td class="col-title col-responsive nowrap" style="width: 33%">
+                                    <a href="#" onclick="window.location.href='{editUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;" title="" data-original-title="Edit record">
+                                        {config.valueTitle}
+                                    </a>
+                                </td>
+                                <td class="col-title col-responsive nowrap" style="width: 33%">
+                                    <a href="#" onclick="window.location.href='{editUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;" title="" data-original-title="Edit record">
+                                        <f:translate key="tx_nlpageconfig_domain_model_config.type.I.{config.type}">{config.type}</f:translate>
+                                    </a>
+                                </td>
+                                <td class="col-control nowrap">
+                                    <div class="btn-group" role="group">
+                                        <a class="btn btn-default" href="#" onclick="window.location.href='{editUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;" title="" data-original-title="Edit record">
+                                            <span class="t3js-icon icon icon-size-small icon-state-default icon-actions-open" data-identifier="actions-open">
+                                                <span class="icon-markup">
+                                                    <f:image src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-open.svg" width="16" height="16" />
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="btn btn-default t3js-record-delete" href="#" data-l10parent="0" data-params="cmd[tx_nlpageconfig_domain_model_config][{config.pid}][delete]={config.uid}" data-title="{config.valueKey}" data-message="{f:translate(key: 'deleteWarning', default: 'Are you sure you want to delete this record?')} &quot;{config.valueKey}&quot; [tx_nlpageconfig_domain_model_config:{config.uid}]" title="" data-original-title="Delete record (!)">
+                                            <span class="t3js-icon icon icon-size-small icon-state-default icon-actions-edit-delete" data-identifier="actions-edit-delete">
+                                                <span class="icon-markup">
+                                                    <f:image src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-edit-delete.svg" width="16" height="16" />
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </f:for>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </f:if>
+</f:section>
+</html>

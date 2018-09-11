@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-10T16:21:52Z" product-name="nl_pageconfig">
+		<header/>
+		<body>
+			<trans-unit id="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="value_key.description">
+				<source>valueKey</source>
+			</trans-unit>
+			<trans-unit id="page.description">
+				<source>page</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="text.description">
+				<source>text</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,141 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    95,
+                    174
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Config",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "977536641144"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "type",
+                            "propertyType": "Select",
+                            "uid": "1326228047249"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "valueKey",
+                            "propertyType": "String",
+                            "uid": "1438371416742"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "page",
+                            "propertyType": "Integer",
+                            "uid": "850673315600"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "1259686694416"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "text",
+                            "propertyType": "RichText",
+                            "uid": "775829663390"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Config => list"
+                },
+                "description": "Page Config Module",
+                "key": "pc",
+                "mainModule": "web",
+                "name": "Page Config",
+                "tabLabel": "Page Config"
+            }
+        ],
+        "description": "Page Config by netzlabor coding GmbH",
+        "emConf": {
+            "category": "module",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.7.0-8.7.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "8.7.0-8.7.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "nl_pageconfig",
+        "name": "Page Config",
+        "originalExtensionKey": "nl_pageconfig",
+        "originalVendorName": "NL",
+        "persons": [
+            {
+                "company": "netzlabor coding GmbH",
+                "email": "maksim.chubin@netzlabor-coding.de",
+                "name": "Maksym Chubin",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "NL"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-08-10 04:21",
+        "extension_builder_version": "8.7.0",
+        "be_user": " (1)"
+    }
+}

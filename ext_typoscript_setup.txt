@@ -1,0 +1,13 @@
+# Module configuration
+module.tx_nlpageconfig_web_nlpageconfigpc {
+    view {
+        templateRootPaths.0 = EXT:nl_pageconfig/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:nl_pageconfig/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:nl_pageconfig/Resources/Private/Layouts/
+    }
+}
+
+page.5 {
+    stdWrap.postUserFunc = NL\NlPageconfig\Hooks\ConfigParser->parse
+    stdWrap.postUserFunc.rootline = 1
+}

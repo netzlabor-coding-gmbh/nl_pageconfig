@@ -1,0 +1,32 @@
+{namespace nl=NL\NlPageconfig\ViewHelpers}
+<div class="tx-nl-pageconfig">
+    <f:be.container includeRequireJsModules="{0: 'TYPO3/CMS/Backend/AjaxDataHandler'}">
+        <div class="module-loading-indicator"></div>
+        <div class="module-docheader t3js-module-docheader" style="height: auto;">
+            <div class="module-docheader-bar module-docheader-bar-navigation t3js-module-docheader-bar t3js-module-docheader-bar-navigation row" style="height: auto;">
+                <div class="module-docheader-bar-column-left col-xs-12 col-sm-3">
+                    <nl:be.pagePath />
+                </div>
+                <div class="module-docheader-bar-column-right col-xs-12 col-sm-9 text-right">
+                </div>
+            </div>
+            <div class="module-docheader-bar module-docheader-bar-buttons t3js-module-docheader-bar t3js-module-docheader-bar-buttons" style="height: auto;">
+                <div class="module-docheader-bar-column-left">
+                    <div class="btn-toolbar" role="toolbar" aria-label="">
+                        <a href="#" class="btn btn-default btn-sm " title="Create new record" onclick="window.location.href='{createUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;">
+                            <span class="t3js-icon icon icon-size-small icon-state-default icon-actions-document-new" data-identifier="actions-document-new">
+                                <span class="icon-markup">
+                                    <f:image src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-document-new.svg" width="16" height="16" />
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="module-body t3js-module-body" style="padding-top: 89px;">
+            <f:flashMessages />
+            <f:render section="main" />
+        </div>
+    </f:be.container>
+</div>

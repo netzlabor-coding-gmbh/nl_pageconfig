@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-10T16:21:52Z" product-name="nl_pageconfig">
+		<header/>
+		<body>
+			<trans-unit id="tx_nlpageconfig_domain_model_config">
+				<source>Config</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.type.I.1">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.type.I.2">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.type.I.3">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.value_key">
+				<source>Key</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flash.configsEmpty">
+				<source>There are no config records on this page.</source>
+			</trans-unit>
+			<trans-unit id="deleteWarning">
+				<source>Are you sure you want to delete this record?</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

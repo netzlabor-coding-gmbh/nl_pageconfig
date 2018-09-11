@@ -1,0 +1,20 @@
+{
+    "name": "nl/nl-pageconfig",
+    "type": "typo3-cms-extension",
+    "description": "Page Config by netzlabor coding GmbH",
+    "version": "1.0.1",
+    "authors": [
+        {
+            "name": "Maksym Chubin",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "NL\\NlPageconfig\\": "Classes"
+        }
+    }
+}
