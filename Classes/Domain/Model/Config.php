@@ -10,13 +10,10 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2018 Maksym Chubin <maksim.chubin@netzlabor-coding.de>, netzlabor coding GmbH
+ *  (c) 2019 Maksym Chubin <maksim.chubin@netzlabor-coding.de>, netzlabor coding GmbH
  *
  ***/
 
-/**
- * Config
- */
 /**
  * Config
  */
@@ -25,7 +22,8 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     const TYPE_PROPERTY_MAP = [
         1 => 'page',
         2 => 'image',
-        3 => 'text'
+        3 => 'text',
+        4 => 'string',
     ];
 
     /**
@@ -65,6 +63,13 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $text = '';
+
+    /**
+     * string
+     *
+     * @var string
+     */
+    protected $string = '';
 
     /**
      * @return mixed
@@ -242,5 +247,26 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setText($text)
     {
         $this->text = $text;
+    }
+
+    /**
+     * Returns the string
+     *
+     * @return string $string
+     */
+    public function getString()
+    {
+        return $this->string;
+    }
+
+    /**
+     * Sets the string
+     *
+     * @param string $string
+     * @return void
+     */
+    public function setString($string)
+    {
+        $this->string = $string;
     }
 }

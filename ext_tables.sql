@@ -8,5 +8,6 @@ CREATE TABLE tx_nlpageconfig_domain_model_config (
 	page int(11) DEFAULT '0' NOT NULL,
 	image int(11) unsigned NOT NULL default '0',
 	text text,
+	string varchar(255) DEFAULT '' NOT NULL,
 
 );

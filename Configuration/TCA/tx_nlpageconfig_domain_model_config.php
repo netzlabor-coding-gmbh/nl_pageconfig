@@ -2,7 +2,7 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:nl_pageconfig/Resources/Private/Language/locallang_db.xlf:tx_nlpageconfig_domain_model_config',
-        'label' => 'type',
+        'label' => 'value_key',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -15,14 +15,14 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
         ],
-        'searchFields' => 'type,value_key,page,image,text',
+        'searchFields' => 'type,value_key,page,image,text,string',
         'iconfile' => 'EXT:nl_pageconfig/Resources/Public/Icons/tx_nlpageconfig_domain_model_config.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, value_key, page, image, text',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, value_key, page, image, text, string',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, value_key, page, image, text'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, value_key, page, image, text, string'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -49,6 +49,7 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
+                'default' => 0,
                 'items' => [
                     ['', 0],
                 ],
@@ -76,7 +77,7 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                        '0' => 'LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled'
                     ]
                 ],
             ],
@@ -93,6 +94,7 @@ return [
                     ['Page', 1],
                     ['Image', 2],
                     ['Text', 3],
+                    ['String', 4],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
@@ -184,6 +186,16 @@ return [
             ],
             'defaultExtras' => 'richtext:rte_transform'
         ],
-    
+        'string' => [
+            'exclude' => false,
+            'displayCond' => 'FIELD:type:=:4',
+            'label' => 'LLL:EXT:nl_pageconfig/Resources/Private/Language/locallang_db.xlf:tx_nlpageconfig_domain_model_config.string',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+
     ],
 ];

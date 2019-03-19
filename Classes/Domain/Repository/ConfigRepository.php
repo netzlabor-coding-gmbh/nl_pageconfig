@@ -11,7 +11,7 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2018 Maksym Chubin <maksim.chubin@netzlabor-coding.de>, netzlabor coding GmbH
+ *  (c) 2019 Maksym Chubin <maksim.chubin@netzlabor-coding.de>, netzlabor coding GmbH
  *
  ***/
 
