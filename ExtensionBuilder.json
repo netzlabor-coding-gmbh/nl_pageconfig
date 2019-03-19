@@ -82,6 +82,16 @@
                             "propertyName": "text",
                             "propertyType": "RichText",
                             "uid": "775829663390"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "string",
+                            "propertyType": "String",
+                            "uid": "181357987828"
                         }
                     ]
                 },
@@ -134,7 +144,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2018-08-10 04:21",
+        "last_modified": "2019-03-19 12:01",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }
