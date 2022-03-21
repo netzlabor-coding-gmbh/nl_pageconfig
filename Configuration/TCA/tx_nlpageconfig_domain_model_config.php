@@ -18,9 +18,6 @@ return [
         'searchFields' => 'type,value_key,page,image,text,string',
         'iconfile' => 'EXT:nl_pageconfig/Resources/Public/Icons/tx_nlpageconfig_domain_model_config.gif'
     ],
-    'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, value_key, page, image, text, string',
-    ],
     'types' => [
         '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, value_key, page, image, text, string'],
     ],
@@ -44,7 +41,6 @@ return [
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => true,
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',

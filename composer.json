@@ -2,7 +2,7 @@
     "name": "nl/nl-pageconfig",
     "type": "typo3-cms-extension",
     "description": "Page Config by netzlabor coding GmbH",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "authors": [
         {
             "name": "Maksym Chubin",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "typo3/cms-core": "^9.5"
+        "typo3/cms-core": "^9.5 || ^10.4"
     },
     "autoload": {
         "psr-4": {

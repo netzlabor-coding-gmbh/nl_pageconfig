@@ -4,7 +4,7 @@ namespace NL\NlPageconfig\ViewHelpers\Be\Link;
 
 
 use TYPO3\CMS\Backend\Routing\UriBuilder;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 abstract class AbstractLinkViewHelper extends AbstractTagBasedViewHelper
 {

@@ -4,7 +4,7 @@ namespace NL\NlPageconfig\ViewHelpers\Pageconfig;
 
 
 use NL\NlPageconfig\Domain\Service\ConfigService;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class GetViewHelper extends AbstractViewHelper
 {

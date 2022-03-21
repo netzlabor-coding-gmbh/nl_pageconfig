@@ -30,7 +30,7 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * type
      *
      * @var int
-     * @validate NotEmpty
+     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $type = 0;
 
@@ -38,7 +38,7 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * valueKey
      *
      * @var string
-     * @validate NotEmpty
+     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $valueKey = '';
 
@@ -53,7 +53,7 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * image
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $image = null;
 
