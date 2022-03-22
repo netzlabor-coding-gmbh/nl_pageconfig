@@ -3,6 +3,8 @@
 namespace NL\NlPageconfig\ViewHelpers\Be\Uri;
 
 
+use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
+use TYPO3\CMS\Backend\Routing\Exception\RouteNotFoundException;
 use TYPO3\CMS\Backend\Routing\UriBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\ViewHelpers\Be\AbstractBackendViewHelper;
@@ -12,7 +14,7 @@ class RouteViewHelper extends AbstractBackendViewHelper
     /**
      * Arguments initialization
      *
-     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
+     * @throws Exception
      */
     public function initializeArguments()
     {
@@ -31,7 +33,7 @@ class RouteViewHelper extends AbstractBackendViewHelper
 
     /**
      * @return string Rendered link
-     * @throws \TYPO3\CMS\Backend\Routing\Exception\RouteNotFoundException
+     * @throws RouteNotFoundException
      */
     public function render()
     {

@@ -2,12 +2,13 @@
 
 namespace NL\NlPageconfig\ViewHelpers\Be\Link;
 
+use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
 class ModuleViewHelper extends AbstractLinkViewHelper
 {
     /**
      * Arguments initialization
      *
-     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
+     * @throws Exception
      */
     public function initializeArguments()
     {

@@ -1,8 +1,8 @@
 {
     "name": "nl/nl-pageconfig",
-    "type": "typo3-cms-extension",
     "description": "Page Config by netzlabor coding GmbH",
-    "version": "2.1.0",
+    "license": "GPL-2.0-or-later",
+    "type": "typo3-cms-extension",
     "authors": [
         {
             "name": "Maksym Chubin",
@@ -16,5 +16,11 @@
         "psr-4": {
             "NL\\NlPageconfig\\": "Classes"
         }
-    }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "nl_pageconfig"
+        }
+    },
+    "version": "2.1.1"
 }

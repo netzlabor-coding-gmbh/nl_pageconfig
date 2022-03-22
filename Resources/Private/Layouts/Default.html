@@ -1,4 +1,5 @@
 {namespace nl=NL\NlPageconfig\ViewHelpers}
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
 <div class="tx-nl-pageconfig">
     <f:be.container includeRequireJsModules="{0: 'TYPO3/CMS/Backend/AjaxDataHandler'}">
         <div class="module-loading-indicator"></div>
@@ -13,12 +14,8 @@
             <div class="module-docheader-bar module-docheader-bar-buttons t3js-module-docheader-bar t3js-module-docheader-bar-buttons" style="height: auto;">
                 <div class="module-docheader-bar-column-left">
                     <div class="btn-toolbar" role="toolbar" aria-label="">
-                        <a href="#" class="btn btn-default btn-sm " title="Create new record" onclick="window.location.href='{createUri}\u0026returnUrl='+T3_THIS_LOCATION; return false;">
-                            <span class="t3js-icon icon icon-size-small icon-state-default icon-actions-document-new" data-identifier="actions-document-new">
-                                <span class="icon-markup">
-                                    <f:image src="EXT:core/Resources/Public/Icons/T3Icons/actions/actions-document-new.svg" width="16" height="16" />
-                                </span>
-                            </span>
+                        <a href="{be:uri.newRecord(table: 'tx_nlpageconfig_domain_model_config', pid: currentPageId)}" class="btn btn-default btn-sm " title="Create new record">
+                            <core:icon identifier="actions-document-new" />
                         </a>
                     </div>
                 </div>

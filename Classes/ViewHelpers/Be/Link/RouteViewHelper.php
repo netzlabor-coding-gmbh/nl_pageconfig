@@ -2,12 +2,14 @@
 
 namespace NL\NlPageconfig\ViewHelpers\Be\Link;
 
+use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
+use TYPO3\CMS\Backend\Routing\Exception\RouteNotFoundException;
 class RouteViewHelper extends AbstractLinkViewHelper
 {
     /**
      * Arguments initialization
      *
-     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
+     * @throws Exception
      */
     public function initializeArguments()
     {
@@ -18,7 +20,7 @@ class RouteViewHelper extends AbstractLinkViewHelper
 
     /**
      * @return string
-     * @throws \TYPO3\CMS\Backend\Routing\Exception\RouteNotFoundException
+     * @throws RouteNotFoundException
      */
     protected function buildUri()
     {

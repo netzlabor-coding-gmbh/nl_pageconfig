@@ -8,12 +8,12 @@ call_user_func(
         if (TYPO3_MODE === 'BE') {
 
             \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-                'NL.NlPageconfig',
+                'NlPageconfig',
                 'web', // Make module a submodule of 'web'
                 'pc', // Submodule key
                 '', // Position
                 [
-                    'Config' => 'list',
+                    \NL\NlPageconfig\Controller\ConfigController::class => 'list',
                     
                 ],
                 [

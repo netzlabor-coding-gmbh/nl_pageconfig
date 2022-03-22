@@ -18,6 +18,9 @@
 			<trans-unit id="tx_nlpageconfig_domain_model_config.type.I.3">
 				<source>Text</source>
 			</trans-unit>
+			<trans-unit id="tx_nlpageconfig_domain_model_config.type.I.4">
+				<source>String</source>
+			</trans-unit>
 			<trans-unit id="tx_nlpageconfig_domain_model_config.value_key">
 				<source>Key</source>
 			</trans-unit>

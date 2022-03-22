@@ -1,6 +1,10 @@
 <?php
 namespace NL\NlPageconfig\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 
 /***
@@ -17,7 +21,7 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
 /**
  * Config
  */
-class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Config extends AbstractEntity
 {
     const TYPE_PROPERTY_MAP = [
         1 => 'page',
@@ -52,7 +56,7 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * image
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var FileReference
      * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $image = null;
@@ -107,6 +111,14 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getTextTitle()
     {
         return $this->getText();
+    }
+
+    /**
+     * @return string
+     */
+    public function getStringTitle()
+    {
+        return $this->getString();
     }
 
     /**
@@ -210,7 +222,7 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the image
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return FileReference $image
      */
     public function getImage()
     {
@@ -220,10 +232,10 @@ class Config extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the image
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @param FileReference $image
      * @return void
      */
-    public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
+    public function setImage(FileReference $image)
     {
         $this->image = $image;
     }

@@ -3,6 +3,7 @@
 namespace NL\NlPageconfig\Controller;
 
 
+use TYPO3\CMS\Backend\Routing\Exception\RouteNotFoundException;
 use NL\NlPageconfig\Domain\Repository\ConfigRepository;
 use TYPO3\CMS\Backend\Routing\UriBuilder;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
@@ -44,7 +45,7 @@ class ConfigController extends ActionController
 
     /**
      *
-     * @throws \TYPO3\CMS\Backend\Routing\Exception\RouteNotFoundException
+     * @throws RouteNotFoundException
      */
     public function listAction()
     {
@@ -63,22 +64,8 @@ class ConfigController extends ActionController
 
         $this->view->assignMultiple([
             'configs' => $configs,
-            'createUri' => $this->backendUriBuilder->buildUriFromRoute('record_edit', $this->getRecordCreateParams()),
+            'currentPageId' => $this->getCurrentPageId()
         ]);
-    }
-
-    /**
-     * @return array
-     */
-    protected function getRecordCreateParams()
-    {
-        return [
-            'edit' => [
-                'tx_nlpageconfig_domain_model_config' => [
-                    $this->getCurrentPageId() => 'new'
-                ]
-            ]
-        ];
     }
 
     /**

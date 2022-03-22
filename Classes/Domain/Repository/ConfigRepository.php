@@ -1,6 +1,9 @@
 <?php
 namespace NL\NlPageconfig\Domain\Repository;
 
+use TYPO3\CMS\Extbase\Persistence\Repository;
+use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
+use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use NL\NlPageconfig\Utility\PageUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
@@ -18,13 +21,13 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 /**
  * The repository for Configs
  */
-class ConfigRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class ConfigRepository extends Repository
 {
     /**
      * @var array
      */
     protected $defaultOrderings = [
-        'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+        'sorting' => QueryInterface::ORDER_ASCENDING
     ];
 
     /**
@@ -46,7 +49,7 @@ class ConfigRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * @param int $recursive
      * @param bool $rootline
      * @param bool $respectStorage
-     * @return array|object|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     * @return array|object|QueryResultInterface
      */
     public function findConfig($key = null, $pid = null, $recursive = null, $rootline = false, $respectStorage = true)
     {
@@ -90,7 +93,7 @@ class ConfigRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     }
 
     /**
-     * @return \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
+     * @return TypoScriptFrontendController
      */
     protected function getTypoScriptFrontendController()
     {
